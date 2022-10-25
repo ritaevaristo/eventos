@@ -10,5 +10,8 @@ public class EventosController {
 	public String form() {
 		return "formEvento";
 	}
-
+	@RequestMapping(path = "/eventos")
+	public String adicionar() {
+		return "evento-adicionado";
+	}
 }
