@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Eventos</title>
+</head>
+<body>
+<div th:replace = "~{menu :: menu}"></div>
+
+<div class="contaneir">
+
+	</body>
+
+<h1>Lista de eventos</h1>
+
+<table> 
+
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Nome</th>
+			<th>Local</th>
+			<th>Data</th>
+			<th>Horário</th>
+		</tr>
+	<thead>
+	
+	<tbody>
+		<tr th:each = "e : ${eventos} ">
+			<td th:text = "${e.id}">1</td>
+			<td th:text = "${e.nome}">Aniversário de Rita</td>
+			<td th:text = "${e.Local}">Praia</td>
+			<td th:text = "${e.data}">14/10/2023</td>
+			<td th:text = "${e.horario}">15h</td>
+		</tr>
+	</tbody>
+</table>
+</body>
+
+</html>
