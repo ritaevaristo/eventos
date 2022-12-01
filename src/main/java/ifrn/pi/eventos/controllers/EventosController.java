@@ -83,4 +83,19 @@ public class EventosController {
 		return "redirect:/eventos/{idEvento}";
 		
 	}
-}
+
+	@GetMapping("/{id}/remover")
+	public String apagarEvento(@PathVariable Long id) {
+		
+		Optional<Evento> opt = er.findById(id);
+			if(opt.isEmpty()) {
+				// apagar
+			
+			Evento evento = opt.get();	
+			er.delete(evento);
+	}
+			return "redirect:/eventos";
+			}
+		
+		
+	}
