@@ -22,6 +22,7 @@
 			<th>Local</th>
 			<th>Data</th>
 			<th>Horário</th>
+			<th>></th>
 		</tr>
 	<thead>
 	
@@ -32,6 +33,7 @@
 			<td th:text = "${e.Local}">Praia</td>
 			<td th:text = "${e.data}">14/10/2023</td>
 			<td th:text = "${e.horario}">15h</td>
+			<td><a th:hreaf =@{/eventos/{id}/remover(id=${e.id})>apagar</a</td>
 		</tr>
 	</tbody>
 </table>
