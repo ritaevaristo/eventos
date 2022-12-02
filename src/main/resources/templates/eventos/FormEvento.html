@@ -17,19 +17,19 @@
 
 
 		<div>
-			<label>Nome:</label> <input type="text" name=nome>
+		 <input type="hidden" name=id th:value = "${evento.id}" reandonly="reandoly">
 		</div>
 
 		<div>
-			<label>Local:</label> <input type="text" name=Local>
+			<label>Local:</label> <input type="text" name=Local th:value = "${evento.Local}">
 		</div>
 	
 		<div>
-			<label>Data:</label> <input type="text" name=Data>
+			<label>Data:</label> <input type="text" name=Data th:value = "${evento.Data}">
 		</div>
 
 		<div>
-			<label>Horário:</label> <input type="text" name=Horário>
+			<label>Horário:</label> <input type="text" name=Horário th:value = "${evento.Horario}">
 		</div>
 		
 		<div>

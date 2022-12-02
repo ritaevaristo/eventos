@@ -2,6 +2,7 @@
 <html  xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <title>Eventos</title>
 </head>
 <body>
@@ -33,7 +34,8 @@
 			<td th:text = "${e.Local}">Praia</td>
 			<td th:text = "${e.data}">14/10/2023</td>
 			<td th:text = "${e.horario}">15h</td>
-			<td><a th:hreaf =@{/eventos/{id}/remover(id=${e.id})>apagar</a</td>
+			<a th:hreaf =@{/eventos/{id}/selecionar(id=${e.id})}><i class="material-icons">delete</i></a
+			<a th:hreaf =@{/eventos/{id}/remover(id=${e.id})}><i class="material-icons">delete</i></a
 		</tr>
 	</tbody>
 </table>
